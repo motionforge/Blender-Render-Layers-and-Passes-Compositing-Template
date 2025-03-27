@@ -173,6 +173,10 @@ See Example Fusion set up below.
 
 ![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Davinci%20Resolve%20Fusion%20Data%20Passes%20Set%20Up%20Example.jpg)
 
+Note: In Davinci Resolve Timeline - it does not preview the Alpha Layer. So you won't be able to see if the Alpha is there or not. But it is recognised in Fusion. So any work done with Alpha layer should be gone in Fusion.
+
+Once the footage is set up in Fusion you should be able to place clips on top of each other and the Alpha mask should just work. - Please post a comment if you can't get this to work. 
+
 YT Video: Import/Export Comps: https://youtu.be/XQ3slO30f8Q?si=z1GBfykIx54B4R12
 
 Whilst the below goes into a Unreal Engine work flow. It does (at around 8 Minutes 15 seconds) show how to install and use the Fusion Reactor script – Split EXR. So you don’t have to manually split out the file every time! (Unfortunately I think this is no longer available for free users – so you will have to upgrade your Davinci Resolve to use this).
