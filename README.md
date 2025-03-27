@@ -30,7 +30,7 @@ After these data passes have been rendered they have to be recombined to get bac
 
 The Light passes of the Diffuse, glossy, Transmission are added together. These are then multiplied by the colour pass. The volume has no color pass so is just added. As are the other layers. Then they are all added together to create the combined image (or beauty pass).
 
-![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Rendered_Images/Data%20Passes%20Flow%20Chart.jpg)
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Data%20Passes%20Flow%20Chart.jpg)
 
 # Passes Set Up
 Detailed below is how to set up data passes and view layers. In the Blender file (that can be download from Github – link above) the template/file already has all these settings set up – so you can view what’s been done and edit where you require.
@@ -42,7 +42,7 @@ Check all the boxes for the data passes you wish to export.
 You can just export a mist or emissive pass.
 It really depends on your requirements for what passes you require.
 
-![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Rendered_Images/data%20passes%20tab.jpg)
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/data%20passes%20tab.jpg)
 
 # Denoising Passes Set Up
 
@@ -54,6 +54,58 @@ Turn off Denoise in the Scene tab – you do not need this on if using the compo
 As shown in image below – This is for single layer Denoising.
 Please note you can keep this on – but it only denoises your combined image.
 
-![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Rendered_Images/data%20passes%20tab.jpg)
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/data%20passes%20tab.jpg)
+
+Multilayer Data Passes Denoising:
+
+Make sure to Turn on Denoising Data in the Data passes tab.
+You can denoise the data layers directly in the compositor.
+It will denoise the combined image – but for this template a combined image is not used.
+
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Denoising%20data.jpg)
+
+Compositor Set Up – For Passes:
+
+Go to the Compositor tab.
+Tick the Use Nodes Box.
+Add a Render layers node (if not there already).
+Drag off from each connector.
+Add the required nodes.
+You do not need to add or multiple – as that stage is done in a different program.
+Passes that have no direct / indirect lighting can just be added.
+Data layers do not automatically have alpha added – so add an Set Alpha node if required.
+Only light bounces create noise – so colour passes (and a few others) don’t need denoising.
+Add an Output node.
+Add the data passes to the Output node.
+Select the folder for output (in the output node).
+In the output node – select Multilayered EXR.
+Compression can be DWAA or DWAB – or what ever you prefer!
+If its a still image (not an animation sequence) consider just using Zip or a lossless format.
+
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Compositor%20v2.jpg)
+
+
+# View Layers Set Up
+
+This template comes with three view layers. Combined, background and foreground. The image below is from the provided template and has a render output for the two view layers. In this case – Foreground and Background. The template is not set up to output the combined layer and this is just so the scene in its entirety can be viewed.
+
+In the top right hand corner there is the ‘Viewlayer’ field.
+To crate a new view layer. Select the add view layer.
+Either copy settings or create a new default view layer.
+Now simply, change settings, e.g. hold out, indirect or the required data passes.
+The settings will auto save depending on what view layer you have selected.
+It is that simple – although don’t forget that the layers now have independent settings.
+So if you change a setting in one layer – make sure to change in another layer if requred.
+In the compositor you can select to render out view layers separately – via render node.
+Then combine them in your compositing software.
+
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Viewlayers.jpg)
+
+The image below is from the provided template and has a render output for the two view layers. In this case – Foreground and Background.
+
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/view%20layers%20with%20data%20passes.jpg)
+
+# How To Use the Blender File Template
+
 
 
