@@ -16,6 +16,43 @@ The template/file is set up for use with Cycles, but can be easily adjusted for 
 
 Please note the overview below provides a detailed summary for how to use the template, but it does require some knowledge of Blender, photo editing programs and Davinci Resolve.
 
+# How To Use the Blender File Template
+
+This template is set up only for exporting out your renders into a folder so they can be used with a different program such as Nuke, After Effects or DaVinci Resolve.
+
+This is not set up for editing the layers internally in Blender.
+
+Whilst I have called this a template you can simple save the file and copy, and use where ever you wish. Or go to File > Defaults > Save Startup File (Be careful as this will override any default settings you have) to save the compositor set up.
+
+These settings may need changing depending on your specific requirements or program you are exporting to.
+
+Download the Template
+Open Blender.
+Go to the Compositing Tab.
+Check or uncheck required passes. e.g. Diffuse Direct, Indirect etc…
+Make sure that the output folder is correctly selected for where you want to save the renders.
+Make sure you have select the appropriate color profile .e.g. ACEScg, sRGB etc…
+Click the Render button or F12 to render a single image.
+Open the EXR in Photoshop or Affinity Paint (or what image editor you use).
+Arrange layers – edit as required.
+
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/PNG_Featured_Image_Featured.jpg)
+
+# Blender File Template Notes
+
+Compositor Notes:
+
+Remember to select a path in the compositor for the output(s).
+You don’t need Denoising for the color passes and some other passes.
+It’s only the light passes (e.g. Diffuse Direct) that create noise.
+Data Passes don’t automatically add the alpha layer so its set in the different passes.
+You don’t need the denoise option ticketed if using denoise node in the different passes.
+Denoise option only denoises the combined pass.
+The layers are only denoised in the output folder (not the viewer panel).
+
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Compositor%20v2.jpg)
+
+
 # Back To Beauty
 The term ‘back to beauty’ relates to rendering the different elements (e.g. colour, direct and indirect lighting etc..) of a rendered image (also known as Data Passes) and then afterwards combining these different rendered passes/elements back to the original image.
 
@@ -107,43 +144,6 @@ Then combine them in your compositing software.
 The image below is from the provided template and has a render output for the two view layers. In this case – Foreground and Background.
 
 ![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/view%20layers%20with%20data%20passes.jpg)
-
-# How To Use the Blender File Template
-
-This template is set up only for exporting out your renders into a folder so they can be used with a different program such as Nuke, After Effects or DaVinci Resolve.
-
-This is not set up for editing the layers internally in Blender.
-
-Whilst I have called this a template you can simple save the file and copy, and use where ever you wish. Or go to File > Defaults > Save Startup File (Be careful as this will override any default settings you have) to save the compositor set up.
-
-These settings may need changing depending on your specific requirements or program you are exporting to.
-
-Download the Template
-Open Blender.
-Go to the Compositing Tab.
-Check or uncheck required passes. e.g. Diffuse Direct, Indirect etc…
-Make sure that the output folder is correctly selected for where you want to save the renders.
-Make sure you have select the appropriate color profile .e.g. ACEScg, sRGB etc…
-Click the Render button or F12 to render a single image.
-Open the EXR in Photoshop or Affinity Paint (or what image editor you use).
-Arrange layers – edit as required.
-
-![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/PNG_Featured_Image_Featured.jpg)
-
-# Blender File Template Notes
-
-Compositor Notes:
-
-Remember to select a path in the compositor for the output(s).
-You don’t need Denoising for the color passes and some other passes.
-It’s only the light passes (e.g. Diffuse Direct) that create noise.
-Data Passes don’t automatically add the alpha layer so its set in the different passes.
-You don’t need the denoise option ticketed if using denoise node in the different passes.
-Denoise option only denoises the combined pass.
-The layers are only denoised in the output folder (not the viewer panel).
-
-![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Compositor%20v2.jpg)
-
 
 # Set Up Affinity Paint
 
