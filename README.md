@@ -1,5 +1,8 @@
 # Blender Render Layers and Passes – Compositing Template
- A blender file with data passes and layers set up for compositing export. For Further details please see the post here: https://www.motionforgepictures.com/blender-render-layers-and-passes-compositing-template/
+
+- A blender file with data passes and layers set up for compositing export. 
+- For Further details and for easier reading with structured number steps - please see the post here:
+- https://www.motionforgepictures.com/blender-render-layers-and-passes-compositing-template/
 
 
 # Introduction
