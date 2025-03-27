@@ -16,23 +16,26 @@ Please note the overview below provides a detailed summary for how to use the te
 
 - Simply click on the code button to download and then unzip the file. Where you will find a blender file that you can save, and use for your renders.
 
-This template is set up only for exporting out your renders into a folder so they can be used with a different program such as Davinci Resolve, Nuke, Affinity Paint or After Effects.
+This template is set up only for exporting out your renders into a folder so they can be used with a different program such as Davinci Resolve, Affinity Photo, Photoshop, Nuke, After Effects etc...
 
 This is not set up for editing the layers internally in Blender.
 
-Whilst I have called this a template you can simple save the file and copy, and use where ever you wish. Or go to File > Defaults > Save Startup File (Be careful as this will override any default settings you have) to save the compositor set up.
+Whilst I have called this a template you can simply save the file and copy, and use where ever you wish. Or in Blender > go to > File > Defaults > Save Startup File (Be careful as this will override any startup default settings you have) to save with this compositor set up.
 
 These settings may need changing depending on your specific requirements or program you are exporting to.
 
-- Download the Template
-- Open Blender.
+- Download the Blender File / Template.
+- Unzip the file and save where is appropriate for you.
+- Open the Blender file.
 - Go to the Compositing Tab.
 - Check or uncheck required passes. e.g. Diffuse Direct, Indirect etc…
 - Make sure that the output folder is correctly selected for where you want to save the renders.
-- Make sure you have select the appropriate color profile .e.g. ACEScg, sRGB etc…
+- Make sure you have selected the appropriate color profile .e.g. ACEScg, sRGB etc...
 - Click the Render button or F12 to render a single image.
 - Open the EXR in Photoshop or Affinity Paint (or what image editor you use).
 - Arrange layers – edit as required.
+
+Following this you can then use this set up (or however you have updated the settings) in your own CG work with Blender. Either just duplicate the file and then create your model, scene or animation, or save in the Start up file.
 
 ![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/PNG_Featured_Image_Featured.jpg)
 
