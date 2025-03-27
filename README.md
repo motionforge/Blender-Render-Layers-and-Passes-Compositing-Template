@@ -24,18 +24,21 @@ Whilst I have called this a template you can simply save the file and copy, and 
 
 These settings may need changing depending on your specific requirements or program you are exporting to.
 
-- Download the Blender File / Template.
-- Unzip the file and save where is appropriate for you.
+- Go to Github (link above) > Press the Green Code button and download the zip file.
+- Unzip the file and save the Blender file where is appropriate for you.
 - Open the Blender file.
+- Go to the View layers tab.
+- Check or uncheck required passes. e.g. Diffuse Direct, Indirect etc...
 - Go to the Compositing Tab.
-- Check or uncheck required passes. e.g. Diffuse Direct, Indirect etc…
+- In the Output node(s).
 - Make sure that the output folder is correctly selected for where you want to save the renders.
 - Make sure you have selected the appropriate color profile .e.g. ACEScg, sRGB etc...
+- Change compression settings where required and make sure it's a multilayered EXR.
 - Click the Render button or F12 to render a single image.
-- Open the EXR in Photoshop or Affinity Paint (or what image editor you use).
-- Arrange layers – edit as required.
+- Open the EXR in Photoshop, Affinity Paint, Davinci Resolve (or your preferred program).
+- Arrange layers - edit as required.
 
-Following this you can then use this set up (or however you have updated the settings) in your own CG work with Blender. Either just duplicate the file and then create your model, scene or animation, or save in the Start up file.
+You can then use this set up (or however you have updated the settings) in your own CG work with Blender. Either just duplicate the file and then create your model, scene or animation, or save the Start up file to have this with every new Blender file you create.
 
 ![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/PNG_Featured_Image_Featured.jpg)
 
@@ -44,12 +47,12 @@ Following this you can then use this set up (or however you have updated the set
 Compositor Notes:
 
 - Remember to select a path in the compositor for the output(s).
-- You don’t need Denoising for the color passes and some other passes.
-- It’s only the light passes (e.g. Diffuse Direct) that create noise.
-- Data Passes don’t automatically add the alpha layer so its set in the different passes.
-- You don’t need the denoise option ticketed if using denoise node in the different passes.
-- Denoise option only denoises the combined pass.
+- You don't need Denoising for the color passes and some other passes.
+- It's only the light passes (e.g. Diffuse Direct) that create noise.
+- Data passes don't automatically add the alpha layer so it's been added in the different passes.
+- You don't need denoise option ticketed in render properties tab if using the denoise node in the compositor. See further details below. This denoise option only denoises the combined pass.
 - The layers are only denoised in the output folder (not the viewer panel).
+- If you uncheck a data pass it will appear as an empty layer in the exported image unless the socket is deleted from the export node.
 
 ![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Compositor%20v2.jpg)
 
@@ -89,9 +92,9 @@ It really depends on your requirements for what passes you require.
 
 Denoising:
 
-Combined Single Layer Denoising:
+Single Layer Denoising:
 
-Turn off Denoise in the Scene tab – you do not need this on if using the compositor.
+Turn off Denoise in the Render Tab – you do not need this on if using the compositor.
 As shown in image below – This is for single layer Denoising.
 Please note you can keep this on – but it only denoises your combined image.
 
@@ -102,26 +105,27 @@ Multilayer Data Passes Denoising:
 Make sure to Turn on Denoising Data in the Data passes tab.
 You can denoise the data layers directly in the compositor.
 It will denoise the combined image – but for this template a combined image is not used.
+You may wish to have a combined image - so can check this option.
 
 ![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Denoising%20data.jpg)
 
-Compositor Set Up – For Passes:
+Compositor Set Up - For Passes:
 
 Go to the Compositor tab.
 Tick the Use Nodes Box.
 Add a Render layers node (if not there already).
-Drag off from each connector.
-Add the required nodes.
-You do not need to add or multiple – as that stage is done in a different program.
-Passes that have no direct / indirect lighting can just be added.
-Data layers do not automatically have alpha added – so add an Set Alpha node if required.
-Only light bounces create noise – so colour passes (and a few others) don’t need denoising.
 Add an Output node.
-Add the data passes to the Output node.
+Add the required data passes to the output node.
+Drag off from each connector and connect to the output node.
+Add the required nodes.
+You do not need to add or multiple nodes together - This is done in a different program.
+Passes that have no direct / indirect lighting can just be added.
+Data layers do not automatically have alpha added - so add an Set Alpha node if required.
+Only light bounces create noise - so colour passes (and a few others) don't need denoising.
 Select the folder for output (in the output node).
-In the output node – select Multilayered EXR.
-Compression can be DWAA or DWAB – or what ever you prefer!
-If its a still image (not an animation sequence) consider just using Zip or a lossless format.
+In the output node - select Multilayered EXR.
+Compression can be DWAA or DWAB - or what ever you prefer!
+If its a still image (not an animation sequence) consider using Zip or a lossless format.
 
 ![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Compositor%20v2.jpg)
 
