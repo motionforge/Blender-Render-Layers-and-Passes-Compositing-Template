@@ -107,5 +107,112 @@ The image below is from the provided template and has a render output for the tw
 
 # How To Use the Blender File Template
 
+This template is set up only for exporting out your renders into a folder so they can be used with a different program such as Nuke, After Effects or DaVinci Resolve.
+
+This is not set up for editing the layers internally in Blender.
+
+Whilst I have called this a template you can simple save the file and copy, and use where ever you wish. Or go to File > Defaults > Save Startup File (Be careful as this will override any default settings you have) to save the compositor set up.
+
+These settings may need changing depending on your specific requirements or program you are exporting to.
+
+Download the Template
+Open Blender.
+Go to the Compositing Tab.
+Check or uncheck required passes. e.g. Diffuse Direct, Indirect etc…
+Make sure that the output folder is correctly selected for where you want to save the renders.
+Make sure you have select the appropriate color profile .e.g. ACEScg, sRGB etc…
+Click the Render button or F12 to render a single image.
+Open the EXR in Photoshop or Affinity Paint (or what image editor you use).
+Arrange layers – edit as required.
+
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/PNG_Featured_Image_Featured.jpg)
+
+# Blender File Template Notes
+
+Compositor Notes:
+
+Remember to select a path in the compositor for the output(s).
+You don’t need Denoising for the color passes and some other passes.
+It’s only the light passes (e.g. Diffuse Direct) that create noise.
+Data Passes don’t automatically add the alpha layer so its set in the different passes.
+You don’t need the denoise option ticketed if using denoise node in the different passes.
+Denoise option only denoises the combined pass.
+The layers are only denoised in the output folder (not the viewer panel).
+
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Compositor%20v2.jpg)
+
+
+# Set Up Affinity Paint
+
+This template is only for exporting out your renders into a folder so they can be used with a different program such as Nuke, After Effects or DaVinci Resolve.
+
+It may be that you won't need all the data passes activated, so select only what you require in Blender. The outline below provides a summary of bringing a single rendered image/frame into a paint program such as Affinity Paint.
+
+Download the Template
+Open Blender.
+Go to the Compositing Tab.
+Make sure that the output folder is correctly selected.
+Make sure you have select the appropriate color profile .e.g. ACEScg, sRGB etc...
+Click the Render button or F12 to render a single image.
+Open the EXR in Photoshop or Affinity Paint (or what image editor you use).
+If using Photoshop be sure to use the free - EXR-IO plugin.
+If using Affinity see details here for - Affinity EXR set up.
+Arrange layers in the program as required - edit as required.
+
+# Set Up in Davinci Resolve
+
+There is an EXR script for splitting out data passes so you don’t need to do this manually. Also you can export and save comp set ups. So you only need to create the comp once and then after that just go to File > Import Comp > And import your fusion composition.
+
+Bring the image file or image sequence into Davinci Resolve.
+Bring the image / sequence into the timeline or directly set up a Fusion Clip.
+With the file in the time or the fusion clip open.
+Arrange layers as required in Fusion by adding, multiplying or merging.
+These layers are arranged as noted in the diagram at the top of the page.
+See Example Fusion set up below.
+
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Davinci%20Resolve%20Fusion%20Data%20Passes%20Set%20Up%20Example.jpg)
+
+YT Video: Import/Export Comps: https://youtu.be/XQ3slO30f8Q?si=z1GBfykIx54B4R12
+
+Whilst the below goes into a Unreal Engine work flow. It does (at around 8 Minutes 15 seconds) show how to install and use the Fusion Reactor script – Split EXR. So you don’t have to manually split out the file every time! (Unfortunately I think this is no longer available for free users – so you will have to upgrade your Davinci Resolve to use this).
+
+YT Cideo: Data Passes Scrip: https://www.youtube.com/watch?v=rVMyktVYiI0&t
+
+
+# Blender to DaVinci Resolve – ACEScg Color Management
+
+PLEASE NOTE: I and others have experienced performance and playback issues when using Multi layered EXRs. This is something you may wish to consider before using DaVinci Resolve for compositing. DaVinci Resolve is a fantastic program, but one area that does need improvement is its ability to handle Multi Layered EXRs. You will need to make sure you have caching on in the timeline to work with them.
+
+These are different options for setting up your ACEScg color profile. Below covers one way to do this.
+
+Create a new Resolve Project.
+Go to Color Management
+Set to Acescct.
+REC 709 or sRGB as the output.
+Import the image sequence.
+Right click on it and go to Color Input
+Select Acescg
+This is all you need to do to get up and running.
+In Fusion it applies a view lut – so it will be different from the timeline and color correction section.
+You can chose Gamut or HDR – to much closer to your timeline / color correction sections.
+
+![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Davinci%20Colour%20Managament.jpg)
+
+# Notes
+
+There is a node in Fusion where you can select color profiles, but this is not required if setting system (at a top project level) to ACEScg (as noted above).
+Also if using this node you will need to do this for every clip you use – so potentially hundreds of times. So I recommend using the project system settings as it sets it globally.
+If you bring in a non ACEScg image or video you can still select the appropriate color profile. E.g. sRGB and it will work.
+
+
+# Final Note
+
+If you an indie filmmaker or animator then this may well be over kill. Remember that this is (very likely) not required for your work and will add additional time and effort to your renders. You can just render out in a combined layer EXR and use ACEScg. This will give you a high quality image, with a wider colour/highlight/shadow range, but will save any hassle with multilayered passes.
+
+Or just do a more simplified version. You could just render out a Mist pass or AO pass and composite with your combined image.
+
+Of course if you are learning or working in VFX, then processes such as this are pretty much a necessity to know (assuming AI hasn’t taken over the process when your reading this!). Or if you have a team, or people to specialise in VFX then it’s worth doing.
+
+But it’s your story that really counts, so remember to focus on that!
 
 
