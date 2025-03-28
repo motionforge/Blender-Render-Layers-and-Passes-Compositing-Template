@@ -197,17 +197,20 @@ PLEASE NOTE: I and others have experienced performance and playback issues when 
 
 These are different options for setting up your ACEScg color profile. Below covers one way to do this.
 
-Create a new Resolve Project.
-Go to Color Management
-Set to Acescct.
-REC 709 or sRGB as the output.
-Import the image sequence.
-Right click on it and go to Color Input
-Select Acescg
-This is all you need to do to get up and running.
-In Fusion it applies a view lut – so it will be different from the timeline and color correction section.
-You can chose Gamut or HDR – to much closer to your timeline / color correction sections.
-
+- Create a new Resolve Project.
+- Go to bottom right hand corner > click on the cog icon.
+- This opens project settings.
+- Go to Color Management.
+- Set to Acescct.
+- Aces 1.2 (or a later version - you can test either or use the version best for your workflow)
+- Select REC 709 or sRGB as the output.
+- Everything else can stay the same.
+- In the media browser or timeline - Import the image sequence(s).
+- Right click on image sequence > go to > Aces Input Transform > Color space conversion
+- Then select Acescg CSC.
+- This is all you need to do to get up and running.
+- In Fusion it applies a view lut - so it will be different from the timeline and color correction section.
+- You can chose Gamut or HDR - to much closer to your timeline / color correction sections.
 ![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Davinci%20Colour%20Managament.jpg)
 
 # Notes
