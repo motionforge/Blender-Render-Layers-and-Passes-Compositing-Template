@@ -156,16 +156,16 @@ This template is only for exporting out your renders into a folder so they can b
 
 It may be that you won't need all the data passes activated, so select only what you require in Blender. The outline below provides a summary of bringing a single rendered image/frame into a paint program such as Affinity Paint.
 
-Download the Template
-Open Blender.
-Go to the Compositing Tab.
-Make sure that the output folder is correctly selected.
-Make sure you have select the appropriate color profile .e.g. ACEScg, sRGB etc...
-Click the Render button or F12 to render a single image.
-Open the EXR in Photoshop or Affinity Paint (or what image editor you use).
-If using Photoshop be sure to use the free - EXR-IO plugin.
-If using Affinity see details here for - Affinity EXR set up.
-Arrange layers in the program as required - edit as required.
+- Download the Template
+- Open Blender.
+- Go to the Compositing Tab.
+- Make sure that the output folder is correctly selected.
+- Make sure you have select the appropriate color profile .e.g. ACEScg, sRGB etc...
+- Click the Render button or F12 to render a single image.
+- Open the EXR in Photoshop or Affinity Paint (or what image editor you use).
+- If using Photoshop be sure to use the free - EXR-IO plugin.
+- If using Affinity see details here for - https://affinity.help/photo2/English.lproj/index.html?page=pages/HDR/openexr.html&title=32-bit%20OpenEXR%20support- Affinity EXR set up.
+- Arrange layers in the program as required - edit as required.
 
 # Set Up in Davinci Resolve
 
