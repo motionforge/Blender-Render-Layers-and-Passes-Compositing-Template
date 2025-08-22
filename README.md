@@ -169,14 +169,15 @@ It may be that you won't need all the data passes activated, so select only what
 
 # Set Up in Davinci Resolve
 
-There is an EXR script for splitting out data passes so you don’t need to do this manually. Also you can export and save comp set ups. So you only need to create the comp once and then after that just go to File > Import Comp > And import your fusion composition.
+There is an EXR script for splitting out data passes so you don’t need to do this manually. 
+Also you can export and save comp set ups. So you only need to create the comp once and then after that just go to File > Import Comp > And import your fusion composition.
 
-Bring the image file or image sequence into Davinci Resolve.
-Bring the image / sequence into the timeline or directly set up a Fusion Clip.
-With the file in the time or the fusion clip open.
-Arrange layers as required in Fusion by adding, multiplying or merging.
-These layers are arranged as noted in the diagram at the top of the page.
-See Example Fusion set up below.
+- Bring the image file or image sequence into Davinci Resolve.
+- Bring the image / sequence into the timeline or directly set up a Fusion Clip.
+- With the file in the time or the fusion clip open.
+- Arrange layers as required in Fusion by adding, multiplying or merging.
+- These layers are arranged as noted in the diagram at the top of the page.
+- See Example Fusion set up below.
 
 ![](https://github.com/motionforge/Blender-Render-Layers-and-Passes-Compositing-Template/blob/main/Images/Davinci%20Resolve%20Fusion%20Data%20Passes%20Set%20Up%20Example.jpg)
 
