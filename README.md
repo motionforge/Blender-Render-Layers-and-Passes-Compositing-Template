@@ -14,6 +14,15 @@ Please note the overview below provides a detailed summary for how to use the te
 
 # How To Use the Blender File Template
 
+# Link to Youtube Video Overview:
+
+[![Watch the video](https://img.youtube.com/vi/-2lQlfgkZgg/maxresdefault.jpg)](https://youtu.be/-2lQlfgkZgg)
+
+### [Youtube overview](https://youtu.be/-2lQlfgkZgg)
+
+
+# Written Instructions Below:
+
 - Simply click on the code button to download and then unzip the file. Where you will find a blender file that you can save, and use for your renders.
 
 This template is set up only for exporting out your renders into a folder so they can be used with a different program such as Davinci Resolve, Affinity Photo, Photoshop, Nuke, After Effects etc...
