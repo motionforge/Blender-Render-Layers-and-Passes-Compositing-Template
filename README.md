@@ -14,7 +14,10 @@ Please note the overview below provides a detailed summary for how to use the te
 
 # How To Use the Blender File Template
 
-[<iframe width="560" height="315" src="https://www.youtube.com/embed/-2lQlfgkZgg?si=pEA9rZJfiHfp1ZHh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>](https://youtu.be/-2lQlfgkZgg?si=aFGkq9KztLtCTJ_1)
+[![Watch the video](https://img.youtube.com/vi/-2lQlfgkZgg/maxresdefault.jpg)](https://youtu.be/-2lQlfgkZgg)
+
+### [Youtube overview](https://youtu.be/-2lQlfgkZgg)
+
 
 - Simply click on the code button to download and then unzip the file. Where you will find a blender file that you can save, and use for your renders.
 
