@@ -21,7 +21,19 @@ Please note the overview below provides a detailed summary for how to use the te
 ### [Youtube overview](https://youtu.be/-2lQlfgkZgg)
 
 
-# Written Instructions Below:
+# Contents:
+1. Instructions for download and set up.
+2. Blender File Template Notes
+3. Back To Beauty
+4. Passes Set Up
+5. Denoising Passes Set Up
+6. View Layers Set Up
+7. Set Up Affinity Paint
+8. Set Up in Davinci Resolve
+9. Blender to DaVinci Resolve – ACEScg Color Management
+
+
+# Instructions For Download nad Set up:
 
 - Simply click on the code button to download and then unzip the file. Where you will find a blender file that you can save, and use for your renders.
 
